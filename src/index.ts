@@ -3,8 +3,8 @@ import { appRouter } from './router';
 
 export default function(first: object, second: object) {
 	console.log(`The function has started`)
-	console.log('first', first.constructor.name)
-	console.log('second', second.constructor.name)
+	console.log('first', first)
+	console.log('second', second)
 
 	return new Response('You are living on the edge')
 }
