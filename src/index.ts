@@ -1,14 +1,19 @@
-import { fetchRequestHandler } from '@trpc/server/adapters/fetch';
-import { appRouter } from './router';
+import { fetchRequestHandler } from '@trpc/server/adapters/fetch'
+import { appRouter } from './router'
 
-export default function(first: Request, second: object) {
+export default function (first: Request, second: object) {
 	console.log(`The function has started`)
 	console.log('first', first)
 	console.log('second', second)
 
 	console.log(first.url)
 
-	return new Response('You are living on the edge')
+	return fetchRequestHandler({
+		endpoint: '/trpc',
+		req: first,
+		router: appRouter,
+		createContext: () => ({}),
+	})
 }
 
 // addEventListener('fetch', (event) => {
