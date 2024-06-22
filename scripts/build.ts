@@ -9,9 +9,9 @@ const vercelConfig = {
 	version: 3,
 	overrides: {},
 	routes: [
-		{
-			handle: 'filesystem',
-		},
+		// {
+		// 	handle: 'filesystem',
+		// },
 		{
 			src: '/.*',
 			dest: '/fn',
