@@ -34,6 +34,7 @@ await Promise.all([
 	await esbuild.build({
 		entryPoints: ['src/index.ts'],
 		bundle: true,
+		platform: 'neutral',
 		outfile: '.vercel/output/functions/fn.func/index.mjs',
 		sourcemap: true,
 		logLevel: 'info',
