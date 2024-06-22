@@ -3,7 +3,7 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"build": "esbuild src/index.ts --bundle --outdir=dist --sourcemap",
+		"build": "tsx scripts/build.ts",
 		"dev": "pnpm build && edge-runtime --listen ./dist/index.js --port 3000",
 		"test-dev": "start-server-and-test 'pnpm dev' http://127.0.0.1:3000 'tsx src/client.ts'"
 	},
